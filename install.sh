@@ -11,7 +11,7 @@ do
         continue
     fi
 
-    ln -Ffsv ~/$DOTFILES_DIR/$DOTFILE ~/$DOTFILE
+    ln -fsv ~/$DOTFILES_DIR/$DOTFILE ~
 done
 
 echo "Finished!"
