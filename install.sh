@@ -1,4 +1,4 @@
-DOTFILES_DIR=${PWD##*/}
+DOTFILES_DIR="$PWD"
 
 echo "Linking dotfiles..."
 
@@ -11,7 +11,7 @@ do
         continue
     fi
 
-    ln -fsv ~/$DOTFILES_DIR/$DOTFILE ~
+    ln -fsv "$DOTFILES_DIR/$DOTFILE" ~
 done
 
 echo "Finished!"
