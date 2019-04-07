@@ -27,3 +27,6 @@ set fileencoding=utf-8
 " Press F5 to execute the current file.
 nnoremap <F5> :!"%:p"<Enter>
 
+" Remove all trailing whitespace by pressing F6
+nnoremap <F6> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
