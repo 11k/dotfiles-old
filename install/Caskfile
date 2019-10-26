@@ -1,0 +1,11 @@
+tap "homebrew/cask"
+
+cask "dropbox"
+cask "google-chrome"
+cask "hammerspoon"
+cask "keepassxc"
+cask "macdown"
+cask "mpv"
+cask "sublime-text"
+cask "virtualbox"
+

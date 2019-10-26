@@ -1,0 +1,8 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+
+brew "ffmpeg"
+brew "pyenv"
+brew "python"
+brew "youtube-dl"
+
