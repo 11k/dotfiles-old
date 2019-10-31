@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 
+brew "coreutils"
 brew "ffmpeg"
 brew "pyenv"
 brew "python"
