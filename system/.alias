@@ -1,0 +1,35 @@
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias p="cd ~/Programming"
+
+# mpv
+alias mpv="/Applications/mpv.app/Contents/MacOS/mpv"
+alias mpv-rtmp="/Applications/mpv.app/Contents/MacOS/mpv rtmp://localhost:1935/live/test"
+
+# tmux
+alias tmux-jay=" \
+    tmux new-session -s jay -n あ \; \
+        new-window -n い \; \
+        split-window -h \; \
+        select-pane -t 0 \; \
+        new-window -n う \; \
+        split-window -h \; \
+        select-pane -t 0 \; \
+        new-window -n え \; \
+        split-window -v \; \
+        resize-pane -D 20 \; \
+        select-pane -t 0 \; \
+        split-window -h \; \
+        select-pane -t 0 \; \
+        new-window -n お \; \
+        split-window -v \; \
+        resize-pane -D 20 \; \
+        select-pane -t 0 \; \
+        split-window -h \; \
+        select-window -t 0 \; \
+"
+
