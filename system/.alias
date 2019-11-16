@@ -6,10 +6,6 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Programming"
 
-# mpv
-alias mpv="/Applications/mpv.app/Contents/MacOS/mpv"
-alias mpv-rtmp="/Applications/mpv.app/Contents/MacOS/mpv rtmp://localhost:1935/live/test"
-
 # tmux
 alias tmux-jay=" \
     tmux new-session -s jay -n あ \; \
