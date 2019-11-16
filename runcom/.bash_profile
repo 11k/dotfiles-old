@@ -23,10 +23,15 @@ PATH="$DOTFILES_DIR/bin:$PATH"
 
 # Source the dotfiles (order matters)
 
-for DOTFILE in "$DOTFILES_DIR"/system/.{path,env,alias,prompt,completion}; do
+for DOTFILE in "$DOTFILES_DIR"/system/.{path,alias,prompt,completion}; do
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
 
+if is-macos; then
+  for DOTFILE in "$DOTFILES_DIR"/system/.{env}.macos; do
+    [ -f "$DOTFILE" ] && . "$DOTFILE"
+  done
+fi
 
 # Clean up
 
