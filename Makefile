@@ -22,12 +22,14 @@ sudo:
 packages: brew-packages cask-apps python-packages
 
 link: stow-$(OS)
-	for FILE in $$(\ls -A runcom); do if [ -f $(HOME)/$$FILE -a ! -h $(HOME)/$$FILE ]; then mv -v $(HOME)/$$FILE{,.bak}; fi; done
+	for FILE in $$(\ls -A runcom && ls -A etc); do if [ -f $(HOME)/$$FILE -a ! -h $(HOME)/$$FILE ]; then mv -v $(HOME)/$$FILE{,.bak}; fi; done
 	stow -t $(HOME) runcom
+	stow -t $(HOME) etc
 
 unlink: stow-$(OS)
 	stow --delete -t $(HOME) runcom
-	for FILE in $$(\ls -A runcom); do if [ -f $(HOME)/$$FILE.bak ]; then mv -v $(HOME)/$$FILE.bak $(HOME)/$${FILE%%.bak}; fi; done
+	stow --delete -t $(HOME) etc
+	for FILE in $$(\ls -A runcom && ls -A etc); do if [ -f $(HOME)/$$FILE.bak ]; then mv -v $(HOME)/$$FILE.bak $(HOME)/$${FILE%%.bak}; fi; done
 
 brew:
 	is-executable brew || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
