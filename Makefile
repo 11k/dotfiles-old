@@ -8,6 +8,8 @@ all: $(OS)
 
 macos: sudo core-macos packages link
 
+linux: link
+
 core-macos: brew bash
 
 stow-macos: brew
