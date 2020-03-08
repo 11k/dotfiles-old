@@ -13,19 +13,19 @@ alias tmux-jay=" \
         split-window -h \; \
         select-pane -t 0 \; \
         new-window -n う \; \
-        split-window -h \; \
+        split-window -v \; \
         select-pane -t 0 \; \
         new-window -n え \; \
         split-window -v \; \
-        resize-pane -D 20 \; \
-        select-pane -t 0 \; \
-        split-window -h \; \
+        split-window -v \; \
+        select-layout even-vertical \; \
         select-pane -t 0 \; \
         new-window -n お \; \
         split-window -v \; \
-        resize-pane -D 20 \; \
+        split-window -h \; \
         select-pane -t 0 \; \
         split-window -h \; \
+        select-pane -t 0 \; \
         select-window -t 0 \; \
 "
 
