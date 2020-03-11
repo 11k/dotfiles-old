@@ -15,6 +15,9 @@ core-macos: brew bash
 stow-macos: brew
 	is-executable stow || brew install stow
 
+stow-linux:
+	is-executable stow || apt-get -y install stow 
+
 sudo:
 	sudo -v
 	while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
