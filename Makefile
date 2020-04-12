@@ -43,10 +43,10 @@ bash: brew
 	if ! grep -q $(BASH) $(SHELLS); then brew install bash bash-completion@2 pcre && sudo append $(BASH) $(SHELLS) && chsh -s $(BASH); fi
 
 brew-packages: brew
-	brew bundle --file=$(DOTFILES_DIR)/install/Brewfile
+	brew bundle --no-lock --file=$(DOTFILES_DIR)/install/Brewfile
 
 cask-apps: brew
-	brew bundle --file=$(DOTFILES_DIR)/install/Caskfile
+	brew bundle --no-lock --file=$(DOTFILES_DIR)/install/Caskfile
 
 python-packages: brew-packages
 	pip3 install -r $(DOTFILES_DIR)/install/pipfile
